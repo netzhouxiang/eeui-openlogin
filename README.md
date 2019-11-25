@@ -17,6 +17,10 @@
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/1.png)  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/2.png)  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/3.png)  
+  
+  
+修改appid为你的应用ID
+![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/4.png)  
 
 4.在项目中，通过以下代码调用：  
 ```javascript
