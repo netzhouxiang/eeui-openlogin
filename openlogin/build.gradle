@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion project.appMinSdkVersion
+        targetSdkVersion project.targetSdkVersion
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6"
+    //
+    compileOnly "com.alibaba:fastjson:${project.fastjsonLibVersion}"
+    if (project.eeuiVersionCode >= 28) {
+        compileOnly "org.apache.weex:sdk_legacy:${project.weex_sdkLibVersion}"
+    } else {
+        compileOnly "com.taobao.android:weex_sdk:${project.weex_sdkLibVersion}"
+    }
+    compileOnly "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6"
+    //
+    compileOnly project(":eeui")
+}

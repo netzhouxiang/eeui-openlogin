@@ -1,0 +1,49 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="eeui.android.openlogin" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="16"
+7-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml
+8        android:targetSdkVersion="28" />
+8-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml
+9
+10    <supports-screens
+10-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:6:1-11:35
+11        android:anyDensity="true"
+11-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:7:5-30
+12        android:largeScreens="true"
+12-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:8:5-32
+13        android:normalScreens="true"
+13-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:9:5-33
+14        android:resizeable="true"
+14-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:10:5-30
+15        android:smallScreens="true" />
+15-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:11:5-32
+16
+17    <application
+17-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-26:15
+18        android:allowBackup="false"
+18-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:15:5-32
+19        android:supportsRtl="true"
+19-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:16:5-31
+20        android:theme="@style/AppTheme"
+20-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:17:5-36
+21        tools:replace="android:allowBackup,android:theme" >
+21-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:14:5-54
+22        <activity
+22-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:19:5-24:71
+23            android:name="app.pb.shop.wxapi.WXEntryActivity"
+23-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:20:9-57
+24            android:exported="true"
+24-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:21:9-32
+25            android:launchMode="singleTop"
+25-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:22:9-39
+26            android:theme="@style/transparentThemePay"
+26-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:23:9-51
+27            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+27-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:24:9-68
+28    </application>
+29
+30</manifest>

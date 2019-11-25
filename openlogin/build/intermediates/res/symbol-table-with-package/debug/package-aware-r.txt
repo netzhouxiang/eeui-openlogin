@@ -1,0 +1,4 @@
+eeui.android.openlogin
+string app_name
+style noAnimation
+style transparentThemePay
