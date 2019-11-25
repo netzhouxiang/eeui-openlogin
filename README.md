@@ -14,9 +14,9 @@
 2.下载压缩包后，打开 根目录\plugins\android 文件夹；替换掉 openlogin  
 
 3.用android studio 打开项目，修改包名为你的项目包名，如图：  
-![image](https://raw.githubusercontent.com/netzhouxiang/eeui-html/master/1.png)  
-![image](https://raw.githubusercontent.com/netzhouxiang/eeui-html/master/2.png)  
-![image](https://raw.githubusercontent.com/netzhouxiang/eeui-html/master/3.png)  
+![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/1.png)  
+![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/2.png)  
+![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/3.png)  
 
 4.在项目中，通过以下代码调用：  
 ```javascript
