@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:4:1-33
 		INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml
@@ -24,7 +24,7 @@ ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest
 	android:anyDensity
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:7:5-30
 application
-ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-26:15
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-27:15
 	android:supportsRtl
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:16:5-31
 	android:allowBackup

@@ -58,13 +58,9 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                 WeixinResult result = new WeixinResult();
                 switch (baseResp.errCode) {
                     case BaseResp.ErrCode.ERR_OK:
-                        if ("login".equals(baseResp.transaction)) {
-                            String code = ((SendAuth.Resp) baseResp).code;
-                            result.setMsg("登录成功");
-                            result.setLoginCode(code);
-                        } else {
-                            result.setMsg("分享成功");
-                        }
+                        String code = ((SendAuth.Resp) baseResp).code;
+                        result.setMsg("登录成功");
+                        result.setInfo(code);
                         result.setCode(1);
                         break;
                     case BaseResp.ErrCode.ERR_AUTH_DENIED:

@@ -23,7 +23,7 @@
 15-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:11:5-32
 16
 17    <application
-17-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-26:15
+17-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-27:15
 18        android:allowBackup="false"
 18-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:15:5-32
 19        android:supportsRtl="true"

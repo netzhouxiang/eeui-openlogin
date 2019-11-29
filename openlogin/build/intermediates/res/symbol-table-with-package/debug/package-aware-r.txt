@@ -1,4 +1,9 @@
 eeui.android.openlogin
+drawable retry_btn_default
+drawable retry_btn_press
+drawable retry_btn_selector
+drawable weibosdk_common_shadow_top
+drawable weibosdk_empty_failed
 string app_name
 style noAnimation
 style transparentThemePay

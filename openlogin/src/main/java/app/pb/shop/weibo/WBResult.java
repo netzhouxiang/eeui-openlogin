@@ -1,9 +1,9 @@
-package app.pb.shop.weixin;
+package app.pb.shop.weibo;
 
 /**
- * @author zhumg
+ * @author 周祥
  */
-public class WeixinResult {
+public class WBResult {
 
     private int code;
     private String msg;

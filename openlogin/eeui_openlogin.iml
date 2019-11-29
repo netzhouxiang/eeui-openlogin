@@ -88,11 +88,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 29 Platform (2)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: com.alibaba:fastjson:1.2.58@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.weex:sdk_legacy:0.28.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.sina.weibo.sdk:core:4.4.3:openDefaultRelease@aar" level="project" />
     <orderEntry type="module" module-name="eeui" />
   </component>
 </module>

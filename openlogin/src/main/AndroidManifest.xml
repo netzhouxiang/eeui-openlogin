@@ -23,6 +23,7 @@ package="eeui.android.openlogin">
         android:theme="@style/transparentThemePay"
         android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
+
 </application>
 
 </manifest>
