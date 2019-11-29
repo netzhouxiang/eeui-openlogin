@@ -23,7 +23,7 @@
 15-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:11:5-32
 16
 17    <application
-17-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-27:15
+17-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-32:15
 18        android:allowBackup="false"
 18-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:15:5-32
 19        android:supportsRtl="true"
@@ -44,6 +44,18 @@
 26-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:23:9-51
 27            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 27-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:24:9-68
-28    </application>
-29
-30</manifest>
+28        <activity
+28-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:26:5-31:71
+29            android:name="app.pb.shop.tiktokapi.TikTokEntryActivity"
+29-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:27:9-65
+30            android:exported="true"
+30-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:28:9-32
+31            android:launchMode="singleTop"
+31-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:29:9-39
+32            android:theme="@style/transparentThemePay"
+32-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:30:9-51
+33            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+33-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:31:9-68
+34    </application>
+35
+36</manifest>

@@ -5,7 +5,7 @@
 目前支持以下第三方登录，持续扩展中：  
 微信登录  
 微博登录   
-
+抖音登录  
 
 使用步骤：  
   
@@ -22,25 +22,30 @@
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/1.png)  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/2.png)  
 
-2.增加新浪微博支持：  
+2.增加新浪微博，抖音支持：  
 ```javascript
   maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+  maven { url 'https://dl.bintray.com/aweme-open-sdk-team/public' }
 ```
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/3.png)  
   
   
-3.修改你的微信应用ID和微博应用配置  
+3.修改你的微信应用ID、微博应用配置、抖音clientkey配置  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/4.png)  
 
 4.在项目中，通过以下代码调用：  
 ```javascript
   const ol = app.requireModule('openlogin');
   //微信登录
-  ol.login(res=>{
+  ol.WeiXinLogin(res=>{
     //res回调
   });
   //微博登录
-  ol.weibologin(res=>{
+  ol.WeiBoLogin(res=>{
+    //res回调
+  });
+  //抖音登录
+  ol.DouYinLogin(res=>{
     //res回调
   });
 ```

@@ -23,7 +23,12 @@ package="eeui.android.openlogin">
         android:theme="@style/transparentThemePay"
         android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
-
+    <activity
+        android:name="app.pb.shop.tiktokapi.TikTokEntryActivity"
+        android:exported="true"
+        android:launchMode="singleTop"
+        android:theme="@style/transparentThemePay"
+        android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 </application>
 
 </manifest>

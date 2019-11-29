@@ -28,6 +28,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6"
     implementation 'com.sina.weibo.sdk:core:4.4.3:openDefaultRelease@aar'
+    implementation 'com.bytedance.ies.ugc.aweme:open-sdk:0.0.1.4'
     //
     compileOnly "com.alibaba:fastjson:${project.fastjsonLibVersion}"
     if (project.eeuiVersionCode >= 28) {
@@ -37,6 +38,7 @@ dependencies {
     }
     compileOnly "com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6"
     compileOnly 'com.sina.weibo.sdk:core:4.4.3:openDefaultRelease@aar'
+    compileOnly 'com.bytedance.ies.ugc.aweme:open-sdk:0.0.1.4'
     //
     compileOnly project(":eeui")
 }
