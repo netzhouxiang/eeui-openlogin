@@ -90,6 +90,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 29 Platform (2)" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: __local_aars__:E.\web\shop_app\pb\plugins\android\openlogin\libs\open_sdk_r53890096d0e731f134f448c1286e48c2043b484b_lite.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.alibaba:fastjson:1.2.58@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.weex:sdk_legacy:0.28.0@aar" level="project" />

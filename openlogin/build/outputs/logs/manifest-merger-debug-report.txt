@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:4:1-33
 		INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml
@@ -24,7 +24,7 @@ ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest
 	android:anyDensity
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:7:5-30
 application
-ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-32:15
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-49:15
 	android:supportsRtl
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:16:5-31
 	android:allowBackup
@@ -57,6 +57,42 @@ ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:30:9-51
 	android:name
 		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:27:9-65
+activity#com.tencent.connect.common.AssistActivity
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:33:5-37:71
+	android:screenOrientation
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:36:9-43
+	android:configChanges
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:35:9-70
+	android:theme
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:37:9-68
+	android:name
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:34:9-65
+activity#com.tencent.tauth.AuthActivity
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:38:5-48:16
+	android:launchMode
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:40:9-40
+	android:noHistory
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:41:9-33
+	android:name
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:39:9-54
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:1104848568
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:42:9-47:25
+action#android.intent.action.VIEW
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:43:13-65
+	android:name
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:43:21-62
+category#android.intent.category.DEFAULT
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:44:13-72
+	android:name
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:44:23-69
+category#android.intent.category.BROWSABLE
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:45:13-74
+	android:name
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:45:23-71
+data
+ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:46:13-49
+	android:scheme
+		ADDED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:46:19-46
 uses-sdk
 INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml

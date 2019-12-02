@@ -8,6 +8,8 @@ import app.pb.shop.*;
 import app.pb.shop.weixin.*;
 import app.pb.shop.weibo.*;
 import app.pb.shop.douyin.*;
+import app.pb.shop.qq.*;
+import com.tencent.tauth.Tencent;
 import com.taobao.weex.annotation.JSMethod;
 import com.taobao.weex.bridge.JSCallback;
 import com.taobao.weex.common.WXModule;
@@ -16,8 +18,9 @@ public class AppopenloginModule extends WXModule implements LoginCallback {
     WeixinManager weixinManager;
     WBManager wbManager;
     DYManager dyManager;
+    QQManager qqManager;
     JSCallback jscallback;
-
+    public int t_code = 1;
     //微信登录
     @JSMethod
     public void WeiXinLogin(JSCallback callback) {
@@ -28,6 +31,7 @@ public class AppopenloginModule extends WXModule implements LoginCallback {
     @JSMethod
     public void WeiBoLogin(JSCallback callback) {
         createWBManager(callback);
+        t_code = 1;
         wbManager.login();
     }
 
@@ -38,7 +42,23 @@ public class AppopenloginModule extends WXModule implements LoginCallback {
         dyManager.login();
     }
 
+    //qq登录
+    @JSMethod
+    public void QQLogin(JSCallback callback) {
+        createQQManager(callback);
+        t_code = 2;
+        qqManager.login();
+    }
 
+
+    private void createQQManager(JSCallback callback) {
+        this.jscallback = callback;
+        if (qqManager == null) {
+            qqManager = new QQManager();
+            qqManager.init((Activity) mWXSDKInstance.getContext());
+        }
+        qqManager.setCallback(this);
+    }
     private void createDYManager(JSCallback callback) {
         this.jscallback = callback;
         if (dyManager == null) {
@@ -66,8 +86,11 @@ public class AppopenloginModule extends WXModule implements LoginCallback {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (wbManager!=null && wbManager.mSsoHandler != null) {
+        if (t_code==1 && wbManager!=null && wbManager.mSsoHandler != null) {
             wbManager.mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
+        }
+        if (t_code==2 && qqManager!=null && qqManager.loginListener != null) {
+            Tencent.onActivityResultData(requestCode, resultCode, data, qqManager.loginListener);
         }
     }
     @Override

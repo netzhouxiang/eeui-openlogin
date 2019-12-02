@@ -5,18 +5,17 @@
 目前支持以下第三方登录，持续扩展中：  
 微信登录  
 微博登录   
-抖音登录  
+抖音登录 
+QQ登录 
 
 使用步骤：  
   
 一.在项目根目录执行下面语句：  
 ```javascript
-  eeui plugin create openlogin
+  eeui plugin add openlogin
 ```
-  
-二.下载压缩包后，打开 根目录\plugins\android 文件夹；替换掉 openlogin  
 
-三.用android studio 打开项目  
+二.用android studio 打开项目  
 
 1.修改包名为你的APP包名，如图：  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/1.png)  
@@ -45,6 +44,10 @@
   });
   //抖音登录
   ol.DouYinLogin(res=>{
+    //res回调
+  });
+  //QQ登录
+  ol.QQLogin(res=>{
     //res回调
   });
 ```

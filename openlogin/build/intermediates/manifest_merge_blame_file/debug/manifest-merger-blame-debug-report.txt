@@ -23,7 +23,7 @@
 15-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:11:5-32
 16
 17    <application
-17-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-32:15
+17-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:13:1-49:15
 18        android:allowBackup="false"
 18-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:15:5-32
 19        android:supportsRtl="true"
@@ -56,6 +56,42 @@
 32-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:30:9-51
 33            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 33-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:31:9-68
-34    </application>
-35
-36</manifest>
+34        <activity
+34-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:33:5-37:71
+35            android:name="com.tencent.connect.common.AssistActivity"
+35-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:34:9-65
+36            android:configChanges="orientation|keyboardHidden|screenSize"
+36-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:35:9-70
+37            android:screenOrientation="behind"
+37-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:36:9-43
+38            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+38-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:37:9-68
+39        <activity
+39-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:38:5-48:16
+40            android:name="com.tencent.tauth.AuthActivity"
+40-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:39:9-54
+41            android:launchMode="singleTask"
+41-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:40:9-40
+42            android:noHistory="true" >
+42-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:41:9-33
+43            <intent-filter>
+43-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:42:9-47:25
+44                <action android:name="android.intent.action.VIEW" />
+44-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:43:13-65
+44-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:43:21-62
+45
+46                <category android:name="android.intent.category.DEFAULT" />
+46-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:44:13-72
+46-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:44:23-69
+47                <category android:name="android.intent.category.BROWSABLE" />
+47-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:45:13-74
+47-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:45:23-71
+48
+49                <data android:scheme="1104848568" />
+49-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:46:13-49
+49-->E:\web\shop_app\pb\plugins\android\openlogin\src\main\AndroidManifest.xml:46:19-46
+50            </intent-filter>
+51        </activity>
+52    </application>
+53
+54</manifest>

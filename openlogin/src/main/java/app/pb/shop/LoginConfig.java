@@ -18,4 +18,8 @@ public interface LoginConfig {
      * 微信配置
      * */
     public static final String wx_app_id = "wxeec25d888f630e98";
+    /*
+     * qq配置  AndroidManifest.xml 里 <data android:scheme="1104848568" /> 同步需要修改
+     * */
+    public static final String APP_ID = "1104848568";
 }
