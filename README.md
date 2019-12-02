@@ -28,7 +28,7 @@ QQ登录
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/2.png)  
   
   
-3.修改相关配置  
+3.修改相关参数  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/3.png)  
 
 4.在项目中，通过以下代码调用：  
@@ -36,7 +36,7 @@ QQ登录
   const ol = app.requireModule('openlogin');
   //微信登录
   ol.WeiXinLogin(res=>{
-    //res回调
+    //res回调 
   });
   //微博登录
   ol.WeiBoLogin(res=>{
