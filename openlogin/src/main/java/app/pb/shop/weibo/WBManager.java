@@ -21,7 +21,6 @@ public class WBManager {
     //周祥 2019年11月26日 14:27:40 初始化
     public void init(Activity context) {
         this.context = context;
-        AuthInfo a = new AuthInfo(context, LoginConfig.APP_KEY, LoginConfig.REDIRECT_URL, LoginConfig.SCOPE);
         WbSdk.install(context,new AuthInfo(context, LoginConfig.APP_KEY, LoginConfig.REDIRECT_URL, LoginConfig.SCOPE));
         mSsoHandler = new SsoHandler(context);
         manager = this;
