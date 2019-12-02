@@ -4,18 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.widget.Toast;
 
-import app.pb.shop.weixin.WeixinCallback;
-import app.pb.shop.weixin.WeixinManager;
-import app.pb.shop.weixin.WeixinResult;
+import app.pb.shop.*;
+import app.pb.shop.weixin.*;
+import app.pb.shop.weibo.*;
+import app.pb.shop.douyin.*;
 import com.taobao.weex.annotation.JSMethod;
 import com.taobao.weex.bridge.JSCallback;
 import com.taobao.weex.common.WXModule;
-import app.pb.shop.weibo.WBManager;
-import app.pb.shop.weibo.WBCallback;
-import app.pb.shop.weibo.WBResult;
-import app.pb.shop.douyin.*;
 
-public class AppopenloginModule extends WXModule implements WeixinCallback,WBCallback,DYCallback {
+public class AppopenloginModule extends WXModule implements LoginCallback {
     WeixinManager weixinManager;
     WBManager wbManager;
     DYManager dyManager;
@@ -40,22 +37,31 @@ public class AppopenloginModule extends WXModule implements WeixinCallback,WBCal
         createDYManager(callback);
         dyManager.login();
     }
+
+
     private void createDYManager(JSCallback callback) {
         this.jscallback = callback;
         if (dyManager == null) {
             dyManager = new DYManager();
             dyManager.init((Activity) mWXSDKInstance.getContext());
         }
-        dyManager.setDYCallback(this);
+        dyManager.setCallback(this);
     }
-
     private void createWeixinManager(JSCallback callback) {
         this.jscallback = callback;
         if (weixinManager == null) {
             weixinManager = new WeixinManager();
             weixinManager.init((Activity) mWXSDKInstance.getContext());
         }
-        weixinManager.setWeixinCallback(this);
+        weixinManager.setCallback(this);
+    }
+    private void createWBManager(JSCallback callback) {
+        this.jscallback = callback;
+        if (wbManager == null) {
+            wbManager = new WBManager();
+            wbManager.init((Activity) mWXSDKInstance.getContext());
+        }
+        wbManager.setCallback(this);
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -64,42 +70,8 @@ public class AppopenloginModule extends WXModule implements WeixinCallback,WBCal
             wbManager.mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
         }
     }
-    private void createWBManager(JSCallback callback) {
-        this.jscallback = callback;
-        if (wbManager == null) {
-            wbManager = new WBManager();
-            wbManager.init((Activity) mWXSDKInstance.getContext());
-        }
-        wbManager.setWBCallback(this);
-    }
     @Override
-    public void onWBCallback(WBResult result) {
-        if (jscallback == null) {
-            Toast.makeText(mWXSDKInstance.getContext(), "code=" + result.getCode() + ", msg=" + result.getMsg(), Toast.LENGTH_SHORT).show();
-            return;
-        }
-        try {
-            jscallback.invoke(result);
-            jscallback = null;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    @Override
-    public void onCallback(WeixinResult result) {
-        if (jscallback == null) {
-            Toast.makeText(mWXSDKInstance.getContext(), "code=" + result.getCode() + ", msg=" + result.getMsg(), Toast.LENGTH_SHORT).show();
-            return;
-        }
-        try {
-            jscallback.invoke(result);
-            jscallback = null;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    @Override
-    public void onDYCallback(DYResult result) {
+    public void onCallback(LoginResult result) {
         if (jscallback == null) {
             Toast.makeText(mWXSDKInstance.getContext(), "code=" + result.getCode() + ", msg=" + result.getMsg(), Toast.LENGTH_SHORT).show();
             return;

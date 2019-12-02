@@ -18,20 +18,19 @@
 
 三.用android studio 打开项目  
 
-1.修改包名为你的项目包名，如图：  
+1.修改包名为你的APP包名，如图：  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/1.png)  
-![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/2.png)  
 
 2.增加新浪微博，抖音支持：  
 ```javascript
   maven { url "https://dl.bintray.com/thelasterstar/maven/" }
   maven { url 'https://dl.bintray.com/aweme-open-sdk-team/public' }
 ```
+![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/2.png)  
+  
+  
+3.修改相关配置  
 ![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/3.png)  
-  
-  
-3.修改你的微信应用ID、微博应用配置、抖音clientkey配置  
-![image](https://raw.githubusercontent.com/netzhouxiang/eeui-openlogin/master/4.png)  
 
 4.在项目中，通过以下代码调用：  
 ```javascript

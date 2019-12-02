@@ -3,8 +3,9 @@ package app.pb.shop.tiktokapi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
+
+import app.pb.shop.*;
 import app.pb.shop.douyin.*;
 import com.bytedance.sdk.open.aweme.TikTokConstants;
 import com.bytedance.sdk.open.aweme.TikTokOpenApiFactory;
@@ -36,9 +37,9 @@ public class TikTokEntryActivity extends Activity implements TikTokApiEventHandl
             // 授权成功可以获得authCode
             DYManager manager = DYManager.get();
             if (manager != null) {
-                DYCallback dyCallback = manager.getDYCallback();
-                if (dyCallback != null) {
-                    DYResult result = new DYResult();
+                LoginCallback callback = manager.getLoginCallback();
+                if (callback != null) {
+                    LoginResult result = new LoginResult();
                     switch (resp.errorCode) {
                         case 0:
                             Authorization.Response response = (Authorization.Response) resp;
@@ -52,10 +53,10 @@ public class TikTokEntryActivity extends Activity implements TikTokApiEventHandl
                             break;
                         default:
                             result.setCode(-1);
-                            result.setMsg("未知原因，登录失败");
+                            result.setMsg(resp.errorMsg);
                             break;
                     }
-                    dyCallback.onDYCallback(result);
+                    callback.onCallback(result);
                 }
             }
         }

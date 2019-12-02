@@ -1,19 +1,16 @@
 package app.pb.shop.weixin;
 
 import android.app.Activity;
-
+import app.pb.shop.*;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 
 public class WeixinManager {
-
-    public static String wx_app_id = "wxeec25d888f630e98";
-
     Activity context;
     IWXAPI iwxapi;
-    WeixinCallback weixinCallback;
+    LoginCallback callback;
     private static WeixinManager manager = null;
 
     public WeixinManager() {
@@ -21,17 +18,17 @@ public class WeixinManager {
 
     public void init(Activity context) {
         this.context = context;
-        iwxapi = WXAPIFactory.createWXAPI(context, wx_app_id, true);
-        iwxapi.registerApp(wx_app_id);
+        iwxapi = WXAPIFactory.createWXAPI(context, LoginConfig.wx_app_id, true);
+        iwxapi.registerApp(LoginConfig.wx_app_id);
         manager = this;
     }
 
-    public void setWeixinCallback(WeixinCallback weixinCallback) {
-        this.weixinCallback = weixinCallback;
+    public void setCallback(LoginCallback callback) {
+        this.callback = callback;
     }
 
-    public WeixinCallback getWeixinCallback() {
-        return weixinCallback;
+    public LoginCallback getLoginCallback() {
+        return callback;
     }
 
     public static WeixinManager get() {
@@ -52,11 +49,11 @@ public class WeixinManager {
             req.transaction = "login";
             iwxapi.sendReq(req);
         } else {
-            if (weixinCallback != null) {
-                WeixinResult result = new WeixinResult();
+            if (callback != null) {
+                LoginResult result = new LoginResult();
                 result.setCode(-10);
                 result.setMsg("沒有安裝微信");
-                weixinCallback.onCallback(result);
+                callback.onCallback(result);
             }
         }
     }

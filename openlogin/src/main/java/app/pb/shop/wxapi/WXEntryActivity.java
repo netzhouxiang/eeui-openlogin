@@ -3,10 +3,8 @@ package app.pb.shop.wxapi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
-import app.pb.shop.weixin.WeixinCallback;
-import app.pb.shop.weixin.WeixinManager;
-import app.pb.shop.weixin.WeixinResult;
+import app.pb.shop.*;
+import app.pb.shop.weixin.*;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
@@ -53,9 +51,9 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
     public void onResp(BaseResp baseResp) {
         WeixinManager manager = WeixinManager.get();
         if (manager != null) {
-            WeixinCallback weixinCallback = manager.getWeixinCallback();
-            if (weixinCallback != null) {
-                WeixinResult result = new WeixinResult();
+            LoginCallback callback = manager.getLoginCallback();
+            if (callback != null) {
+                LoginResult result = new LoginResult();
                 switch (baseResp.errCode) {
                     case BaseResp.ErrCode.ERR_OK:
                         String code = ((SendAuth.Resp) baseResp).code;
@@ -76,7 +74,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                         result.setMsg("未知原因，登录失败");
                         break;
                 }
-                weixinCallback.onCallback(result);
+                callback.onCallback(result);
             }
         }
 
